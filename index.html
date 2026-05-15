@@ -1,1 +1,127 @@
-
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..79a730eb21a1503aa8b2bdaaa062b4fb24368988
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,117 @@
++<!DOCTYPE html>
++<html lang="es">
++<head>
++  <meta charset="UTF-8">
++  <meta name="viewport" content="width=device-width, initial-scale=1.0">
++  <title>Colegio Élite L4D | Academia de supervivientes</title>
++  <link rel="preconnect" href="https://fonts.googleapis.com">
++  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
++  <link rel="stylesheet" href="styles.css">
++</head>
++<body>
++  <header class="hero">
++    <nav class="nav" aria-label="Navegación principal">
++      <a class="logo" href="#inicio">Colegio Élite L4D</a>
++      <div class="nav-links">
++        <a href="#programa">Programa</a>
++        <a href="#jugadores">Jugadores</a>
++        <a href="#inscripcion">Inscripción</a>
++      </div>
++    </nav>
++
++    <section id="inicio" class="hero-content">
++      <p class="eyebrow">Entrenamiento cooperativo profesional</p>
++      <h1>La escuela para formar a los mejores jugadores de Left 4 Dead.</h1>
++      <p class="hero-copy">
++        Aprende rotaciones, comunicación, puntería, control de hordas y estrategias de equipo
++        con un plan diseñado para convertir cada campaña en una victoria limpia.
++      </p>
++      <div class="hero-actions">
++        <a class="button primary" href="#inscripcion">Quiero entrar</a>
++        <a class="button secondary" href="#programa">Ver clases</a>
++      </div>
++    </section>
++  </header>
++
++  <main>
++    <section class="stats" aria-label="Resultados de la academia">
++      <article>
++        <strong>96%</strong>
++        <span>mejora su coordinación en equipo</span>
++      </article>
++      <article>
++        <strong>24/7</strong>
++        <span>guías y rutinas de práctica</span>
++      </article>
++      <article>
++        <strong>4</strong>
++        <span>roles dominados por cada alumno</span>
++      </article>
++    </section>
++
++    <section id="programa" class="section">
++      <div class="section-heading">
++        <p class="eyebrow">Plan de entrenamiento</p>
++        <h2>Clases para sobrevivir como leyenda</h2>
++      </div>
++      <div class="cards">
++        <article class="card">
++          <span class="card-icon">🎯</span>
++          <h3>Puntería bajo presión</h3>
++          <p>Ejercicios de tracking, tiros rápidos y priorización de infectados especiales.</p>
++        </article>
++        <article class="card">
++          <span class="card-icon">🧠</span>
++          <h3>Estrategia cooperativa</h3>
++          <p>Rutas seguras, economía de recursos y llamadas claras para no romper la formación.</p>
++        </article>
++        <article class="card">
++          <span class="card-icon">🛡️</span>
++          <h3>Rescate y cobertura</h3>
++          <p>Técnicas para salvar compañeros, kitear hordas y controlar finales intensos.</p>
++        </article>
++      </div>
++    </section>
++
++    <section id="jugadores" class="section dark-panel">
++      <div class="section-heading">
++        <p class="eyebrow">Salón de honor</p>
++        <h2>Perfil del jugador élite</h2>
++      </div>
++      <div class="player-grid">
++        <article class="player-card">
++          <h3>El Capitán</h3>
++          <p>Lidera rutas, reparte recursos y mantiene al equipo unido durante el caos.</p>
++        </article>
++        <article class="player-card">
++          <h3>La Tiradora</h3>
++          <p>Elimina especiales antes de que separen al grupo y protege la retaguardia.</p>
++        </article>
++        <article class="player-card">
++          <h3>El Médico</h3>
++          <p>Sabe cuándo curar, cuándo empujar y cuándo guardar botiquines para el final.</p>
++        </article>
++        <article class="player-card">
++          <h3>La Exploradora</h3>
++          <p>Detecta amenazas, marca suministros y prepara el avance sin arriesgar al equipo.</p>
++        </article>
++      </div>
++    </section>
++
++    <section id="inscripcion" class="cta">
++      <p class="eyebrow">Nueva generación de supervivientes</p>
++      <h2>Inscríbete y sube tu nivel con tu escuadrón.</h2>
++      <p>
++        Cupos abiertos para jugadores principiantes, intermedios y competitivos que quieran jugar
++        con disciplina, buen humor y mentalidad de equipo.
++      </p>
++      <a class="button primary" href="mailto:admisiones@colegioelitel4d.example">Solicitar admisión</a>
++    </section>
++  </main>
++
++  <footer>
++    <p>© 2026 Colegio Élite L4D. Proyecto fan no afiliado a Valve.</p>
++  </footer>
++</body>
++</html>
+ 
+EOF
+)
